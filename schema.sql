@@ -1,7 +1,15 @@
 CREATE TABLE IF NOT EXISTS customers (
                                          customer_id TEXT PRIMARY KEY,
-                                         name TEXT NOT NULL,
-                                         password TEXT NOT NULL
+                                         customer_type TEXT NOT NULL,
+                                         address TEXT NOT NULL,
+                                         email TEXT NOT NULL,
+                                         first_name TEXT,
+                                         surname TEXT,
+                                         omang_id TEXT,
+                                         company_name TEXT,
+                                         registration_number TEXT,
+                                         tax_id TEXT,
+                                         employer_address TEXT
 );
 
 CREATE TABLE IF NOT EXISTS accounts (
@@ -20,3 +28,8 @@ CREATE TABLE IF NOT EXISTS transactions (
                                             date TEXT NOT NULL,
                                             FOREIGN KEY (account_number) REFERENCES accounts(account_number)
     );
+
+CREATE TABLE IF NOT EXISTS employees (
+                                         username TEXT PRIMARY KEY,
+                                         password TEXT NOT NULL
+);

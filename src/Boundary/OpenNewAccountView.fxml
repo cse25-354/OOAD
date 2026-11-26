@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="540.0" prefWidth="950.0" spacing="20.0" style="-fx-background-color: #ADADAD;" xmlns="http://javafx.com" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox alignment="CENTER_LEFT" spacing="15.0" style="-fx-background-color: #1E293B;">
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+            <children>
+                <Button fx:id="backButton" mnemonicParsing="false" text="&lt; Back" />
+                <Label text="OPEN NEW ACCOUNT" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Region HBox.hgrow="ALWAYS" />
+                <Button fx:id="logoutButton" mnemonicParsing="false" text="Logout" />
+            </children>
+        </HBox>
+
+        <VBox spacing="14.0" style="-fx-background-color: #FFFFFF;">
+            <VBox.margin>
+                <Insets left="180.0" right="180.0" top="10.0" />
+            </VBox.margin>
+            <padding>
+                <Insets bottom="25.0" left="30.0" right="30.0" top="25.0" />
+            </padding>
+            <children>
+                <Label fx:id="customerBannerLabel" text="Customer: None">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="subTitleLabel" text="Account Type">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="accountTypeBox" prefHeight="36.0" prefWidth="530.0" />
+
+                <Label text="10-Digit Account No.">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="accountNumberField" prefHeight="36.0" promptText="e.g. 3001458932" />
+
+                <VBox fx:id="depositSection" spacing="6.0">
+                    <children>
+                        <Label fx:id="depositLabel" text="Initial Deposit (BWP)">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="initialDepositField" prefHeight="36.0" promptText="e.g. 500.00" />
+                    </children>
+                </VBox>
+
+                <VBox fx:id="employerSection" managed="false" spacing="8.0" visible="false">
+                    <children>
+                        <Label text="EMPLOYER DETAILS (Required for Cheque Accounts)">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <HBox spacing="12.0">
+                            <children>
+                                <TextField fx:id="employerNameField" prefHeight="36.0" prefWidth="260.0" promptText="Employer Name" />
+                                <TextField fx:id="employerAddressField" prefHeight="36.0" prefWidth="260.0" promptText="Employer Physical Address" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+
+                <HBox spacing="15.0">
+                    <children>
+                        <Button fx:id="createAccountButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #16A34A;" text="+ CREATE ACCOUNT" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="cancelButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" text="CANCEL" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+
+        <Label fx:id="messageLabel">
+            <VBox.margin>
+                <Insets left="180.0" />
+            </VBox.margin>
+        </Label>
+    </children>
+</VBox>
